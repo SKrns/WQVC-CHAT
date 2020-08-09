@@ -2,7 +2,7 @@
 """Django's command-line utility for administrative tasks."""
 import os
 import sys
-
+import py_eureka_client.eureka_client as eureka_client
 
 def main():
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')
@@ -17,5 +17,12 @@ def main():
     execute_from_command_line(sys.argv)
 
 
+'''
+your_rest_server_port = 9090
+# The flowing code will register your server to eureka server and also start to send heartbeat every 30 seconds
+eureka_client.init(eureka_server="http://your-eureka-server-peer1,http://your-eureka-server-peer2",
+                   app_name="your_app_name",
+                   instance_port=your_rest_server_port)
+'''
 if __name__ == '__main__':
     main()
