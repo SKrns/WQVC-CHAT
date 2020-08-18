@@ -2,14 +2,32 @@
 WQVC(WebRTC-QUIC Video Conference)의 Chat Service 마이크로서비스.
 
 ## 사전 설치 요구사항
-위 프로그램을 사용하기 전에 `https://github.com/SKrns/WQVC-AUTH`를 설치해야한다.
+위 프로그램을 사용하기 전에 `redis-server`를 설치해야한다.
 
 ## 설치 방법
+### 1) 컨테이너 실행
+
+Dockerfile을 빌드 한다.
+
+```
+docker build -t [생성할 이미지 이름] .
+```
+
+이 후, 생성한 이미지를 실행한다.
+
+```
+docker run --link [유레카 컨테이너 이름] -p 7002:7002 -t [생성한 이미지 이름]
+```
+
+
+
+### 2) 일반 실행
 우선 dependencies를 설치한다.
 
 ```
 pip3 install django
 pip3 install py-eureka-client
+pip3 install channels-redis
 ```
 
 깃 레포를 다운로드한다 
