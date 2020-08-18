@@ -7,6 +7,7 @@ WQVC(WebRTC-QUIC Video Conference)의 Chat Service 마이크로서비스.
 ## 설치 방법
 ### 1) 컨테이너 실행
 
+`redis-server` 설치 후,
 Dockerfile을 빌드 한다.
 
 ```
@@ -22,6 +23,8 @@ docker run --link [유레카 컨테이너 이름] -p 7002:7002 -t [생성한 이
 
 
 ### 2) 일반 실행
+
+`redis-server` 설치 후,
 우선 dependencies를 설치한다.
 
 ```
