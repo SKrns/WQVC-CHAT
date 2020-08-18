@@ -2,7 +2,7 @@
 WQVC(WebRTC-QUIC Video Conference)의 Chat Service 마이크로서비스.
 
 ## 사전 설치 요구사항
-위 프로그램을 사용하기 전에 `redis-server`를 설치해야한다.
+위 서비스를 사용하기 전에 `https://github.com/SKrns/WQVC-AUTH`와 `redis-server`와 `https://github.com/Pororo-droid/WQVC-eurkeaServer`가 필요하다.
 
 ## 설치 방법
 ### 1) 컨테이너 실행
@@ -35,6 +35,7 @@ pip3 install channels-redis
 `git clone https://github.com/SKrns/WQVC-CHAT.git`.
 
 레포지토리를 다운로드 한후, 아래 명령어로 chatservice를 실행시킨다.
+로컬 접속은 `http://localhost:7002/chat/`또는`http://localhost:7002/chat/[방이름]_[유저이름]`로 시작한다.
 
 ```
 cd WQVC-CHAT
